@@ -3,11 +3,6 @@ const dotenv = require("dotenv");
 const connectDB = require("../../data/database");
 const app = require("../../app");
 
-// Load environment variables
-dotenv.config({
-  path: "./data/config.env",
-});
-
 // Connect to database (connection will be reused across invocations)
 let dbConnected = false;
 
