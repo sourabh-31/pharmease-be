@@ -3,8 +3,7 @@
   publish = "."
 
 [functions]
-  node_bundler = "nft"
-  included_files = ["data/**", "routes/**", "models/**", "middlewares/**", "utils/**"]
+  node_bundler = "esbuild"
 
 [[redirects]]
   from = "/api/*"
