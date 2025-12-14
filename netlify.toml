@@ -1,0 +1,18 @@
+[build]
+  command = "npm install"
+  publish = "."
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["data/config.env"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
